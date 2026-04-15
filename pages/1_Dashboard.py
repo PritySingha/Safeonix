@@ -115,7 +115,7 @@ with st.sidebar:
         max_amt = float(df["amount"].max())
         
         if min_amt == max_amt:
-            st.info(f"📊 All transactions have the same amount: ${min_amt:,.2f}")
+            st.info(f"📊 All transactions have the same amount: ₹{min_amt:,.2f}")
             # No slider – keep all data
         else:
             amount_range = st.slider(
@@ -161,11 +161,11 @@ metrics_html = f"""
     </div>
     <div class="metric-card">
         <div class="metric-label">💰 Total Volume</div>
-        <div class="metric-value">${total_amount:,.0f}</div>
+        <div class="metric-value">₹{total_amount:,.0f}</div>
     </div>
     <div class="metric-card">
         <div class="metric-label">💸 Fraud Volume</div>
-        <div class="metric-value">${fraud_amount:,.0f}</div>
+        <div class="metric-value">₹{fraud_amount:,.0f}</div>
     </div>
 </div>
 """
@@ -211,7 +211,7 @@ with row2_col2:
             paper_bgcolor="rgba(0,0,0,0)",
             font=dict(color="white"),
             height=400,
-            xaxis=dict(tickangle=0)
+            xaxis=dict(tickangle=90)
         )
         st.plotly_chart(fig_bar, use_container_width=True)
     else:
@@ -238,7 +238,7 @@ for col in ["nameOrig", "nameDest", "oldbalanceOrg", "newbalanceOrig"]:
 
 df_display = df_recent[display_cols].copy()
 df_display["Risk"] = df_display["is_fraud"].map({0: "✅ Safe", 1: "⚠️ Fraud"})
-df_display["amount"] = df_display["amount"].apply(lambda x: f"${x:,.2f}")
+df_display["amount"] = df_display["amount"].apply(lambda x: f"₹{x:,.2f}")
 df_display = df_display.drop(columns=["is_fraud"])
 
 st.markdown("""
