@@ -80,7 +80,7 @@ def show_footer():
             </div>
         </div>
         <div class="footer-copyright">
-            © 2025 Safeonix – AI-powered fraud detection platform
+            © 2026 Safeonix – AI-powered fraud detection platform
         </div>
     </div>
     """
