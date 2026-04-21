@@ -46,7 +46,7 @@ Safeonix/
 │── assets/
 │── static/
 │── requirements.txt
-
+```
 ---
 
 ## ⚙️ Installation
