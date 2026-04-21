@@ -50,7 +50,7 @@ Safeonix/
 ---
 
 ## ⚙️ Installation
-```
+```bash
 git clone https://github.com/yourusername/Safeonix.git
 cd Safeonix
 pip install -r requirements.txt
@@ -59,7 +59,7 @@ streamlit run app.py
 
 ---
 
-###📈 Model Performance
+## 📈 Model Performance
 
 Accuracy: 99.2%
 Precision: 98.7%
@@ -68,7 +68,7 @@ AUC Score: 0.998
 
 ---
 
-### 🎯 Purpose
+## 🎯 Purpose
 
 To provide a smart and modern fraud detection solution for digital transactions using Machine Learning.
 
